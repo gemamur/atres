@@ -1,0 +1,27 @@
+.grid-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    justify-content:space-around;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+}
+
+.cardmedia{
+    padding:10px;
+}
+
+.pagination-custom-style{
+    background-color: #faf8ff;
+    width: 50vw;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
