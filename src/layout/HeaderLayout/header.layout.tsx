@@ -8,7 +8,9 @@ export const HeaderLayout = () => {
     return (
         <>
             <header>
-                <Link to={SwitchRoutes.root}><img src={logo} alt="logo atresmedia" /></Link>
+                <div className="header-logo">
+                    <Link to={SwitchRoutes.root}><img src={logo} alt="logo atresmedia" /></Link>
+                </div>
             </header>
         </>
     );
