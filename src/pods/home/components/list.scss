@@ -1,6 +1,6 @@
 .grid-content{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
     grid-gap: 2rem;
     justify-content:space-around;
     align-content: center;
@@ -24,4 +24,8 @@
     display: flex;
     justify-content: center;
     margin: 2rem;
+}
+a {
+    text-decoration: none;
+    color: black;
 }

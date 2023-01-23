@@ -4,6 +4,7 @@ import { MyCard } from "./card.component";
 import "./list.scss";
 import  ListPagination from "./list.pagination.component";
 import { Grid } from "@mui/material";
+import  "animate.css";
 
 interface Props {
     sites: SitesEntity[];
@@ -27,9 +28,9 @@ export const Home = (props:Props) => {
     <>
     <div className="grid-content">
         {showItems.map(site=>(
-            <div key={site.key} className="item">
+            <div key={site.key} className="item animate__animated animate__fadeIn">
 
-        <MyCard name={site.name} />
+        <MyCard name={site.name} id={site._id} />
 
             </div>
         ))}
