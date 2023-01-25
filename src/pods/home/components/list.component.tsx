@@ -8,10 +8,12 @@ import  "animate.css";
 
 interface Props {
     sites: SitesEntity[];
+    onEdit: (id:string) => void;
+    onDelete: (id:string) => void;
 }
 
 export const Home = (props:Props) => {
-  const {sites} = props;
+  const {sites, onEdit, onDelete} = props;
   const [totalPages, setTotalPages] = React.useState(1);
   const [itemsPage] = React.useState(8);
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -30,7 +32,7 @@ export const Home = (props:Props) => {
         {showItems.map(site=>(
             <div key={site.key} className="item animate__animated animate__fadeIn">
 
-        <MyCard name={site.name} id={site._id} />
+        <MyCard name={site.name} id={site._id} onEdit={onEdit} onDelete={onDelete} />
 
             </div>
         ))}

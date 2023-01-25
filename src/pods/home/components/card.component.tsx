@@ -15,15 +15,15 @@ import { Link } from "react-router-dom";
 interface Props {
     name: string;
     id: string;
+    onEdit: (id:string)=>void;
+    onDelete: (id:string)=>void;
 }
 
 export const MyCard = (props: Props) => {
 
-    const { name, id } = props;
+    const { name, id, onEdit, onDelete  } = props;
 
-    const handleDelete = () =>{
-        alert("delete");
-    }
+
     return (
         <>
         <Card sx={{ minWidth: 345 }}>
@@ -46,10 +46,10 @@ export const MyCard = (props: Props) => {
             
                     
             <CardActions disableSpacing>
-                <IconButton aria-label="Editar">
+                <IconButton aria-label="Editar" onClick={()=>onEdit(id)}>
                 <EditIcon />
                 </IconButton>
-                <IconButton aria-label="Eliminar" onClick={handleDelete}>
+                <IconButton aria-label="Eliminar" onClick={()=>onDelete(id)}>
                 <DeleteIcon />
                 </IconButton>
             </CardActions> 
