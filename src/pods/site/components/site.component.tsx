@@ -21,8 +21,8 @@ export const Site = (props: Props) =>{
                 </div>
                 <div className="data">
                     <h1 className="title">{site.name}</h1>
-                    <div className="description">{site.description}</div>
-                    <div className="link"><Link to={site.path}>{site.path}</Link></div>
+                    <div className="description">Descripción: {site.description}</div>
+                    <div className="link">Visita la web: <a href={site.path}>{site.path}</a></div>
                     
                 </div>    
             </div>  

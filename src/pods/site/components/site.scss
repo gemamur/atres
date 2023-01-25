@@ -1,6 +1,6 @@
 .site{
     width: 96%;
-    height: 50vh;
+    height: 500px;
     border-radius: 20px;
     display: grid;
     grid-template-columns: 1fr 2fr auto;
@@ -15,9 +15,19 @@
             max-height:100%;
         }
     }
-    & .data div{
-        margin: 1rem 0;        
+    & .data {
+        & div{
+            margin: 1rem 0;        
+        }
+        & .description{
+            font-size: larger;
+        }
+        & .link{
+            font-size: large;
+        }
+        
     }
+    
 
     
 }
