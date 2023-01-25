@@ -4,13 +4,16 @@ import { MyCard } from "./card.component";
 import "./list.scss";
 import  ListPagination from "./list.pagination.component";
 import { Grid } from "@mui/material";
+import  "animate.css";
 
 interface Props {
     sites: SitesEntity[];
+    onEdit: (id:string) => void;
+    onDelete: (id:string) => void;
 }
 
 export const Home = (props:Props) => {
-  const {sites} = props;
+  const {sites, onEdit, onDelete} = props;
   const [totalPages, setTotalPages] = React.useState(1);
   const [itemsPage] = React.useState(8);
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -27,9 +30,9 @@ export const Home = (props:Props) => {
     <>
     <div className="grid-content">
         {showItems.map(site=>(
-            <div key={site.key} className="item">
+            <div key={site.key} className="item animate__animated animate__fadeIn">
 
-        <MyCard name={site.name} />
+        <MyCard name={site.name} id={site._id} onEdit={onEdit} onDelete={onDelete} />
 
             </div>
         ))}

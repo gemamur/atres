@@ -11,8 +11,8 @@ interface SwitchRoutes {
     export const SwitchRoutes: SwitchRoutes = {
         root: '/',
         sites: '/sistes',
-        site: '/site',
-        create: '/create-site/:id',
+        site: '/site/:id',
+        create: '/create-site/',
         edit: '/edit-site/:id',
         delete: '/delete-site/:id'
       };
