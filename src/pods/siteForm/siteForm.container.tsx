@@ -5,7 +5,6 @@ import { createEmptySiteForm, SiteFormModel } from "./siteForm.vm";
 import { useNavigate, useParams } from "react-router";
 import { saveSite } from "./api/apiForm.api";
 import { SwitchRoutes } from "@/core/router/routes";
-import { replace } from "formik";
 
 
 export const SiteFormContainer = () => {
@@ -26,9 +25,9 @@ export const SiteFormContainer = () => {
       },[]);
 
 
-    const handleSave = (site:SiteFormModel) => {
-        saveSite(site);
-        navigate(SwitchRoutes.root,{ replace: true});
+    const handleSave = async (site:SiteFormModel) => {
+        await saveSite(site);
+        navigate(SwitchRoutes.root);
     }
     
 
