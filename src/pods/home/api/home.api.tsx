@@ -9,3 +9,8 @@ export const getList = ():Promise<SitesEntityApi[]> => {
         return res.data;
       });
 }
+
+export const deleteSite = async (id: string): Promise<boolean> => {
+  await axios.delete(`${url}/site/${id}`);
+  return true;
+};
